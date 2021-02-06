@@ -21,8 +21,8 @@ class CreateRidesTable extends Migration
             $table->foreignId('customer_id')
                 ->constrained('customers')
                 ->onDelete('cascade');
-            $table->foreignId('vehicule_id')
-                ->constrained('vehicules')
+            $table->foreignId('vehicle_id')
+                ->constrained('vehicles')
                 ->onDelete('cascade');
             $table->decimal('fee', 8, 2);
             $table->tinyInteger('canceled');
