@@ -40,4 +40,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    //Definimos la relación One To Many con la tabla 'drivers'
+    public function drivers()
+    {
+        // Método que devuelve un array de objetos con los conductores asociados al usuario
+        return $this->hasOne(Driver::class);
+    }
+    
+    //Definimos la relación One To Many con la tabla 'customers'
+    public function customers()
+    {
+        // Método que devuelve un array de objetos con los clientes asociados al usuario
+        return $this->hasOne(Customer::class);
+    }
 }
