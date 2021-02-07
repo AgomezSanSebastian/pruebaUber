@@ -14,8 +14,10 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->foreignId('id')
-                ->constrained('users')
+            $table->id();
+            $table->foreign('id')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade');
             $table->integer('requests',$autoIncrement = false, $unsigned = false);
             $table->text('preferences');            
