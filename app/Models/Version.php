@@ -20,7 +20,7 @@ class Version extends Model
     public function brand()
     {
         //este método devuelve el objeto Brand del que se ha hecho el like
-        return $this->belongsTo(Brand::class,'brand_id');
+        return $this->belongsTo(Brand::class,'brands_id');
     }
     
 }
