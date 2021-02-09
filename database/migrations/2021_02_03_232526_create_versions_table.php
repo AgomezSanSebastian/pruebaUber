@@ -17,7 +17,7 @@ class CreateVersionsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->foreignId('brands_id')
+            $table->foreignId('brand_id')
                 ->constrained('brands')
                 ->onDelete('cascade');
             $table->timestamps();
